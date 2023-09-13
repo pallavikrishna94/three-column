@@ -1,0 +1,127 @@
+:root {
+    /* Primary */
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (paragraphs)*/
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+    /*(background, headings, buttons)*/
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-very-light-gray);
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-block: 70px;
+}
+
+.card {
+    width: 20rem;
+    height: 30rem;
+    margin-inline: 70px;
+    padding-inline: 45px;
+    padding-block: 45px;
+}
+
+.one {
+    background-color: var(--clr-bright-orange);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.two {
+    background-color: var(--clr-dark-cyan);
+}
+
+.three {
+    background-color: var(--clr-very-dark-cyan);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card>img {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.heading {
+    color: var(--clr-very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+}
+
+.writing {
+    line-height: 1.8;
+    margin-top: 26px;
+    color: var(--clr-transparent-white);
+    font-family: 'Lexend Deca', sans-serifs;
+    font-size: 15px;
+}
+
+button {
+    border-radius: 50px;
+    margin-top: 30px;
+    width: 9.4rem;
+    height: 3.1rem;
+    background-color: var(--clr-very-light-gray);
+    border: none;
+    font-family: 'Lexend Deca', sans-serifs;
+}
+
+.sed {
+    color: var(--clr-bright-orange);
+}
+
+.suv {
+    color: var(--clr-dark-cyan);
+}
+
+.lux {
+    color: var(--clr-very-dark-cyan);
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--clr-very-light-gray);
+    color: var(--clr-very-light-gray);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 850px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-block: 10px;
+    }
+    .card {
+        margin-inline: 0;
+    }
+    .one {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+    }
+    .three {
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+    }
+
+}
